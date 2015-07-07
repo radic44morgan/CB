@@ -2,7 +2,7 @@ CouchbaseBeer::Application.routes.draw do
   root :to => 'welcome#index'
   resource :locator
   resource :dashboard
-  resources :beers
+  resources :shoes
   resources :breweries
   resources :countries
   resources :favourites
