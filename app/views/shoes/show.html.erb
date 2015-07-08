@@ -1,38 +1,34 @@
 <section id="beer">
     <div class="page-header">
-        <h1><%= @beer.name %></h1>
+        <h1><%= @shoe.name %></h1>
     </div>
 
     <div class="row">
+       
         <div class="span5">
-            <h3>Info <%= favourite_button(@beer) if signed_in? %></h3>
-            <p>Brewed in <%= link_to "Brewed in #{@beer.brewery.name}", brewery_path(@beer.brewery_id) %></p>
-            <p><%= markdown @beer.description %></p>
-        </div>
-        <div class="span5">
-            <h3>Parameters</h3>
-            <table class="table table-bordered table-striped table-hover">
-                <tbody>
-                    <% if @beer.abv > 0 %>
-                        <tr>
-                            <th>Alcohol by volume (ABV)</th>
-                            <td><%= @beer.abv %></td>
-                        </tr>
-                    <% end %>
-                    <% if @beer.ibu > 0 %>
-                        <tr>
-                            <th>International Bittering Units (IBU)</th>
-                            <td><%= @beer.ibu %></td>
-                        </tr>
-                    <% end %>
-                    <% if @beer.srm > 0 %>
-                        <tr>
-                            <th>Standard Reference Method (SRM)</th>
-                            <td><%= @beer.srm %></td>
-                        </tr>
-                    <% end %>
-                </tbody>
-            </table>
+            <% @shoes.each do |shoe| %>
+                <h3><%= shoe.key[1] %></h3>
+                <table class="table table-bordered table-striped table-hover">
+                    <tbody>        
+                            <tr>
+                                <th>Colors</th>
+                                <td><%= shoe.key[3] %></td>
+                            </tr>
+                            <tr>
+                                <th>Size</th>
+                                <td><%= shoe.key[2] %></td>
+                            </tr>
+                            <tr>
+                                <th>Price</th>
+                                <td><%= shoe.key[4] %></td>
+                            </tr>                
+                            <tr>
+                                <th>ID</th>
+                                <td><%= shoe.key[0] %></td>
+                            </tr>
+                    </tbody>
+                </table>
+            <% end %>
         </div>
     </div>
 

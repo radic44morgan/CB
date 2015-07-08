@@ -18,7 +18,7 @@
         <%= content_tag(:tbody, :id => "lookup_table", :data => {:url => shoes_path(:format => :json), :start_key => @last_key} ) do %>
             <% @shoes.each do |shoe| %>
                 <tr>
-                    <td><%= link_to shoe.name, shoe_path(shoe) %></td>
+                    <td><%= link_to shoe.key[1], shoe_path(shoe) %></td>
                     <td><%= shoe.id %></td>
                 </tr>
             <% end %>
