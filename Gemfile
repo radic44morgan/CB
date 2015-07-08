@@ -11,6 +11,7 @@ gem 'couchbase-model', '~> 0.5'
 gem 'rdiscount'
 gem 'omniauth'
 gem 'omniauth-twitter'
+gem 'twitter-bootstrap-rails'
 
 gem 'capistrano'
 

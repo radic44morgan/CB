@@ -6,7 +6,7 @@ class Shoe < Couchbase::Model
   attribute :price
 
 
-  view :all, :limit => 31
+  view :all, :limit => 40
 
    before_save do |doc|
     doc.name = doc.name.to_f
