@@ -6,8 +6,8 @@ common: &common
 
 development:
   <<: *common
-  bucket: Sneakers
+  bucket: MoreSneakers
 
 production:
   <<: *common
-  bucket: Sneakers
+  bucket: MoreSneakers

@@ -14,9 +14,8 @@ class ShoesController < ApplicationController
   end
 
   def show
-    @shoes = Shoe.all(:start_key => [params[:id]],
-                                               :end_key => ["#{params[:id]}\uefff"]).to_a
-    @shoe = Shoe.find(params[:id])
+    @shoes = Shoe.all.to_a
+    @shoe = @shoes.find(:id)
   end
 
   def edit
