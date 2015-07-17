@@ -1,21 +1,25 @@
 <section id="beer">
     <% @shoe.each do |shoe| %>
         <div class="page-header">
-            <h1><%= shoe.key[2] %></h1>
+            <h1><%= shoe.value[0] %></h1>
         </div>
 
         <div class="row">
                 <div class="span5">
-                        <table class="table table-bordered table-striped table-hover">
+                        <table class="table table-bordered  table-hover">
                             <tbody>        
                                     <tr>
                                         <th>Size</th>
-                                        <td><%= shoe.key[3] %></td>
+                                        <td><%= shoe.value[1] %></td>
                                     </tr>
                                     <tr>
                                         <th>Price</th>
-                                        <td>$<%= shoe.key[4] %></td>
-                                    </tr>              
+                                        <td><%= shoe.value[2] %></td>
+                                    </tr>   
+                                    <tr>
+                                        <th>Color</th>
+                                        <td><%= shoe.value[3] %></td>
+                                    </tr>                
                             </tbody>
                         </table>
                 </div>

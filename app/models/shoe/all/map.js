@@ -1,5 +1,5 @@
 function(doc, meta) {
   {
-    emit([doc.MasterSku,doc.DepartmentSKU, doc.Name, doc.Size, doc.Price, doc.Amount]);
+    emit(meta.id, [doc.Name, doc.Size, doc.Price, doc.Color]);
   }
 }

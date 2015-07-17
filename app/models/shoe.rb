@@ -1,11 +1,8 @@
 class Shoe < Couchbase::Model
   attribute :name
-  attribute :MasterSKU
   attribute :size
   attribute :color
   attribute :price
-  attribute :DepartmentSKU
-  attribute :Amount
 
 
   view :all, :limit => 40
